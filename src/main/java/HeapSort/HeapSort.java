@@ -10,6 +10,7 @@ public class HeapSort {
 	//Code anomalies.
 	private static final int number = 1;
 	private int change = 0; 
+	private String string; 
 	
 
     /**
@@ -20,6 +21,7 @@ public class HeapSort {
      * @throws NullEntryException 
      */
     public <T extends Comparable<T>>  void sort(T[] table) throws NullEntryException {
+    	System.out.print(string);
 
         buildHeap(table);
 
