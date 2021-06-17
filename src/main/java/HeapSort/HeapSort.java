@@ -9,7 +9,8 @@ public class HeapSort {
 	
 	//Code anomalies.
 	private static final int number = 1;
-	private String string;
+	private int change = 0; 
+	
 
     /**
      * Sort the array using heapsort algorithm.
@@ -19,7 +20,7 @@ public class HeapSort {
      * @throws NullEntryException 
      */
     public <T extends Comparable<T>>  void sort(T[] table) throws NullEntryException {
-    	System.out.println(string);
+
         buildHeap(table);
 
         shrinkHeap(table);
@@ -49,6 +50,7 @@ public class HeapSort {
                 swap(table, parent, child);
                 child = parent;
                 parent = (child - 1) / 2;
+                change++;
             }
         }
     }
